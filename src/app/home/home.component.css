@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('https://www.shutterstock.com/image-vector/interior-design-reading-room-public-260nw-2318928003.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.home-container {
+  background-color: rgba(255, 255, 255, 0.9); /* translucent white */
+  padding: 30px;
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #34495e;
+}
+
+.intro {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.quick-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.quick-actions button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quick-actions button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(41, 128, 185, 0.3);
+}
+
+.library-stats {
+  text-align: center;
+}
+
+.library-stats h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.stat-card {
+  background-color: #ecf0f1;
+  padding: 20px 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+  color: #27ae60;
+  margin-bottom: 5px;
+}
+
+.stat-card p {
+  margin: 0;
+  font-weight: 500;
+  color: #555;
+}
+.home-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255, 255, 255, 0.85); /* white transparent overlay */
+  z-index: -1;
+}

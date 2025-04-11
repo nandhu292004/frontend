@@ -1,0 +1,18 @@
+<div class="ebook-search-container">
+    <h2>Search for E-Books</h2>
+  
+    <div class="search-bar">
+      <input type="text" [(ngModel)]="searchQuery" placeholder="Enter book title or author" />
+      <button (click)="searchBooks()">Search</button>
+    </div>
+  
+    <div class="results" *ngIf="results.length > 0">
+      <h3>Results:</h3>
+      <div class="book" *ngFor="let book of results">
+        <h4>{{ book.volumeInfo.title }}</h4>
+        <p>Authors: {{ book.volumeInfo.authors?.join(', ') }}</p>
+        <a [href]="book.volumeInfo.previewLink" target="_blank">Preview</a>
+      </div>
+    </div>
+  </div>
+  

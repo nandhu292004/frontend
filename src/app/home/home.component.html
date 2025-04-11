@@ -1,0 +1,31 @@
+<div class="home-container">
+    <h1>Welcome to the Library Management System 📚</h1>
+    <p class="intro">
+      Manage your book borrowing, track your history, and explore our vast collection of books with ease.
+    </p>
+  
+    <div class="quick-actions">
+      <button routerLink="/search-books">🔍 Search Books</button>
+      <button routerLink="/book-list">📗 Available Books</button>
+      <button routerLink="/borrowed-books">📘 Borrowed Books</button>
+    </div>
+  
+    <div class="library-stats">
+      <h2>Library At a Glance</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>{{ totalBooks }}</h3>
+          <p>Total Books</p>
+        </div>
+        <div class="stat-card">
+          <h3>{{ borrowedCount }}</h3>
+          <p>Books Borrowed</p>
+        </div>
+        <div class="stat-card">
+          <h3>8</h3>
+          <p>Books Available</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

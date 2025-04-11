@@ -1,0 +1,38 @@
+<div class="borrowed-books-container">
+  <h2>Borrowed Books</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Student Name</th>
+        <th>Email</th>
+        <th>Book Title</th>
+        <th>Author</th>
+        <th>Borrow Date</th>
+        <th>Due Date</th>
+        <th>Returned</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let record of borrowedBooks">
+        <td>{{ record.id }}</td>
+        <td>{{ record.student_name }}</td>
+        <td>{{ record.email }}</td>
+        <td>{{ record.book_title }}</td>
+        <td>{{ record.author }}</td>
+        <td>{{ record.borrow_date | date: 'yyyy-MM-dd' }}</td>
+        <td>{{ record.due_date | date: 'yyyy-MM-dd' }}</td>
+        <td>{{ record.returned ? 'Yes' : 'No' }}</td>
+        <td>
+          <button *ngIf="!record.returned" (click)="returnBook(record.id, record.book_id)">
+            Return
+          </button>
+          <span *ngIf="record.returned">Returned</span>
+        </td>
+        
+      </tr>
+    </tbody>
+  </table>
+</div>

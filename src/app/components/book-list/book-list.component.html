@@ -1,0 +1,32 @@
+<div class="book-list-container">
+    <h2>Available Books</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Availability</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books">
+          <td>{{ book.id }}</td>
+          <td>{{ book.title }}</td>
+          <td>{{ book.author }}</td>
+          <td>
+            <span [ngClass]="{ 'available': book.available, 'not-available': !book.available }">
+              {{ book.available ? 'Available' : 'Not Available' }}
+            </span>
+          </td>
+          <td>
+            <button *ngIf="book.available" (click)="borrowBook(book.id)">
+              Borrow
+            </button>
+            <span *ngIf="!book.available">Not Available</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
