@@ -17,12 +17,13 @@ export class HomeComponent implements OnInit {
     // Get total books
     this.apiService.getAllBooks().subscribe(allBooks => {
       this.totalBooks = allBooks.length;
-      this.availableCount = allBooks.filter((b: any) => b.available).length;
     });
 
     // Get borrowed count
     this.apiService.getBorrowedCount().subscribe(data => {
       this.borrowedCount = data.borrowedCount;
     });
+    this.availableCount = this.totalBooks - this.borrowedCount;
   }
+  
 }
