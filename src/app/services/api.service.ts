@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root' // ✅ Ensures this service is available globally
 })
 export class ApiService {
-  private apiUrl = 'http://localhost:5000'; // Replace with your backend URL
+  private apiUrl = 'https://backend-lib-nine.vercel.app/'; // Replace with your backend URL
 
   constructor(private http: HttpClient) {}
 
